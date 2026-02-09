@@ -1,0 +1,349 @@
+/*RESPONSIVE STYLING*/
+
+@media (max-width: 1024px) {
+    .section-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .action-buttons {
+        gap: 0.75rem;
+    }
+    
+    .btn {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.85rem;
+    }
+    
+    .action-buttons svg {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+/* Mobile landscape and small tablets */
+@media (max-width: 768px) {
+    .profile-card {
+        padding: 1.25rem;
+    }
+
+    .action-buttons {
+        gap: 0.75rem;
+    }
+    
+    .btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .action-buttons svg {
+        width: 18px;
+        height: 18px;
+        margin-left: 0.4rem;
+    }
+
+    .section-title {
+        margin-top: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .about-tags {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .about-tag {
+        padding: 0.5rem 0rem;
+        font-size: 0.9rem;
+    }
+
+    .section-project .section-title {
+        width: 100%;
+        padding-top: 2rem;
+        margin-bottom: 2rem;
+        justify-content: center; /* Center the title */
+    }
+
+    .section-blog .section-title {
+        width: 100%;
+        margin-bottom: 2rem;
+        justify-content: center; /* Center the title */
+    }
+
+    .section-skills .section-title {
+        width: 100%;
+        margin-bottom: 2rem;
+        justify-content: center; /* Center the title */
+    }
+
+    .language-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .section-language .section-title {
+        width: 100%;
+        margin-bottom: 2rem;
+        justify-content: center;
+    }
+
+    .section-playlist .section-title {
+        width: 100%;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        justify-content: center; /* Center the title */
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-container {
+        width: 80%; /* take more space on small screens */
+    }
+    .nav-container ul li a {
+        font-size: 1rem; /* slightly smaller text */
+    }
+
+    .profile-card {
+        padding: 2rem; /* Less padding on mobile MADE SOME CHANGES HERE */
+    }
+        
+    .profile-name {
+        font-size: 1.75rem; /* Smaller name on mobile */
+    }
+    
+    .social-links a {
+        font-size: 1.75rem; /* Smaller icons on mobile */
+    }
+
+    .action-buttons {
+        grid-template-columns: 1fr; /* Stack vertically on mobile */
+        gap: 1rem;
+    }
+
+    .btn {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .action-buttons svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .section-title {
+        margin-top: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .section-contact {
+        padding: 0 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+
+    .profile-card {
+        padding: 0.8rem;
+        width: 100%;
+    }
+
+    .profile-image-container {
+        width: 100%;
+    }
+
+    .profile-name {
+        font-size: 1.3rem; /* Even smaller name */
+    }
+
+    .btn {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .social-links a {
+        width: 30px; /* Smaller icons */
+        height: 30px;
+    }
+    
+    .action-buttons svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .about-tags {
+        grid-template-columns: 1fr;
+    }
+
+    .about-tag {
+        padding: 0rem 0rem;
+        font-size: 0.85rem;
+    }
+}
+
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS FIXES
+   Add this to the very bottom of style.css
+   ========================================= */
+
+/* 1. Global Layout Adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem; /* Reduce padding to give content more room */
+    }
+
+    /* Fix Navbar Width */
+    .nav-container {
+        width: 90%; /* Wider navbar on mobile so text fits */
+        top: 10px;
+    }
+    
+    .nav-container ul li a {
+        font-size: 0.9rem; /* Slightly smaller text for menu */
+    }
+}
+
+/* 2. Fix the "Too Wide" About Tags */
+@media (max-width: 768px) {
+    .about-tags {
+        /* Switch from Grid to Flexbox on mobile. 
+           This allows tags to be their natural size ("pills") 
+           instead of stretching to fill the screen width. */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Centers the tags */
+        gap: 0.8rem;
+    }
+
+    .about-tag {
+        /* Reset specific grid animations or widths if needed */
+        width: auto; 
+        padding: 0.5rem 1rem; /* Comfortable padding */
+        font-size: 0.9rem;
+    }
+}
+
+/* 3. Fix Profile Card & Centering */
+@media (max-width: 600px) {
+    .section-hero {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-card {
+        width: 100%;
+        margin: 0 0 2rem 0;
+        padding: 1.5rem 1rem; /* Reduce internal padding */
+    }
+
+    .profile-image-container {
+        max-width: 180px; /* Smaller image on mobile */
+        margin-bottom: 1rem;
+    }
+
+    .profile-name {
+        font-size: 1.5rem;
+    }
+
+    /* Stack buttons vertically and ensure they don't overflow */
+    .action-buttons {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+}
+
+/* 4. Fix Project & Blog Cards (The "Trash" Look Cause) */
+@media (max-width: 768px) {
+    /* PROBLEM: Your original minmax(350px, 1fr) forced cards to be 350px wide.
+       Phones are often only 375px wide. 350px + padding = broken layout.
+       
+       FIX: Lower the minimum width to 280px or 100%.
+    */
+    .project-container, 
+    .blog-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .section-contact .section-title {
+        font-size: 1.5rem;
+    }
+
+    .info-card {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .info-card i {
+        font-size: 1rem;
+        height: 30px;
+        width: 30px;
+    }
+
+    .info-card p {
+        font-size: 0.6rem;
+    }
+
+    .info-card span {
+        font-size: 0.75rem;
+    }
+}
+
+/* 5. Extreme Small Screens (iPhone SE, Foldables) */
+@media (max-width: 380px) {
+    .project-container, 
+    .blog-container {
+        grid-template-columns: 1fr; /* Force single column */
+    }
+
+    .project-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .project-card p {
+        display: none;
+    }
+
+    .project-link {
+        display: none;
+    }
+
+    .blog-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .blog-card p {
+        font-size: 0.8rem;
+    }
+
+    .blog-tags {
+        display: none;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        justify-content: center; /* Center titles on small screens */
+    }
+
+    .info-card {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+}
