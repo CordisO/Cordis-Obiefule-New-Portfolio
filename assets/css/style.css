@@ -19,6 +19,14 @@
   padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
 /* COLOUR VARIABLES */
 
 :root {
@@ -82,7 +90,7 @@ body {
 
 .nav-container ul li a {
     text-decoration: none; 
-    color: var(--text-color); 
+    color: var(--link-text-color); 
     font-size: 1.2rem; 
     padding: 0; 
     transition: color 0.3s ease; 
@@ -122,7 +130,7 @@ body {
 
 .profile-image-container {
     width: 100%;
-    max-width: 300px; /* ADD THIS - prevents it from being too huge */
+    max-width: 300px; /* prevents it from being too huge */
     aspect-ratio: 1;
     border: 3px dashed var(--border-color);
     border-radius: 2rem;
@@ -131,7 +139,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 3rem;
-    overflow: hidden; /* ADD THIS - keeps image contained */
+    overflow: hidden; /* keeps image contained */
 }
 
 .profile-image-container img {
@@ -367,6 +375,11 @@ body {
     margin: 0 auto;
 }
 
+.project-header .section-title {
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+}
+
 .section-title svg {
   width: 50px;      /* Scaled SVG to button size */
   height: 50px;
@@ -388,7 +401,7 @@ body {
     border: 2px dashed var(--border-color);
     border-radius: 15px;
     padding: 2rem;
-    height: 280px;
+    height: 300px;
     overflow: hidden;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -547,7 +560,9 @@ body {
 
 /*BLOG SECTION STYLING*/
 .blog-header .section-title {
+    margin-top: 2rem !important;
     padding-top: 2.5rem;
+    padding-bottom: 2rem;
 }
 
 .section-blog {
@@ -724,6 +739,7 @@ body {
 }
 
 .skills-header .section-title {
+    margin-top: 2rem !important;
     padding-top: 2.5rem;
     padding-bottom: 2rem;
     justify-content: flex-end;
@@ -934,140 +950,223 @@ body {
     transition: width 0.5s ease;
 }
 
+/* =========================================
+   CONTACT SECTION STYLING
+   ========================================= */
 
-/*RESPONSIVE STYLING*/
-
-@media (max-width: 1024px) {
-    .section-hero {
-        grid-template-columns: 1fr; /* Stack on tablets */
-    }
-
-    .action-buttons {
-        gap: 0.75rem;
-    }
-    
-    .btn {
-        padding: 0.875rem 1.25rem;
-        font-size: 0.85rem;
-    }
-    
-    .action-buttons svg {
-        width: 20px;
-        height: 20px;
-    }
-
+.section-contact {
+    display: flex;
+    flex-wrap: wrap; /* Allows stacking on mobile */
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 0 2rem;
 }
 
-/* Mobile landscape and small tablets */
-@media (max-width: 768px) {
-    .profile-card {
-        padding: 1.25rem;
-    }
-
-    .action-buttons {
-        gap: 0.75rem;
-    }
-    
-    .btn {
-        padding: 0.75rem 1rem;
-        font-size: 0.9rem;
-    }
-    
-    .action-buttons svg {
-        width: 18px;
-        height: 18px;
-        margin-left: 0.4rem;
-    }
-
-    .section-title {
-        margin-top: 2.5rem;
-        margin-bottom: 2rem;
-    }
-
-    .about-tags {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.75rem;
-    }
-    
-    .about-tag {
-        padding: 0.5rem 0rem;
-        font-size: 0.9rem;
-    }
-
-    .language-container {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
+/* Force the Title to take full width at the top */
+.section-contact .section-title {
+    width: 100%;
+    margin-bottom: 2rem;
+    justify-content: center; /* Center the title */
 }
 
-@media (max-width: 600px) {
-    .nav-container {
-        width: 80%; /* take more space on small screens */
-    }
-    .nav-container ul li a {
-        font-size: 1rem; /* slightly smaller text */
-    }
-
-    .profile-card {
-        padding: 2rem; /* Less padding on mobile MADE SOME CHANGES HERE */
-    }
-        
-    .profile-name {
-        font-size: 1.75rem; /* Smaller name on mobile */
-    }
-    
-    .social-links a {
-        font-size: 1.75rem; /* Smaller icons on mobile */
-    }
-
-    .action-buttons {
-        grid-template-columns: 1fr; /* Stack vertically on mobile */
-        gap: 1rem;
-    }
-
-    .btn {
-        padding: 1rem 1.5rem;
-        font-size: 1rem;
-        width: 100%;
-    }
-
-    .action-buttons svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .section-title {
-        margin-top: 2.5rem;
-        margin-bottom: 2rem;
-    }
+/* Left Side: Contact Info Cards */
+.contact-info {
+    flex: 1;
+    min-width: 300px; /* Won't get smaller than this */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-/* Extra small screens */
-@media (max-width: 400px) {
-    .profile-name {
-        font-size: 1.3rem; /* Even smaller name */
-    }
+.info-card {
+    background: var(--card-color);
+    border: 2px dashed var(--border-color);
+    padding: 1.5rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .btn {
-        padding: 0.875rem 1.25rem;
-        font-size: 0.9rem;
-    }
+.info-card:hover {
+    transform: translateX(10px);
+    box-shadow: 4px 4px 0px var(--border-color);
+}
 
-    .social-links a {
-        width: 30px; /* Smaller icons */
-        height: 30px;
-    }
-    
-    .action-buttons svg {
-        width: 18px;
-        height: 18px;
-    }
+.info-card i {
+    font-size: 1.8rem;
+    color: var(--secondary-accent-color);
+    background: var(--accent-color);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px dashed var(--border-color);
+}
 
-    .about-tags {
-        grid-template-columns: 1fr;
-    }
+.info-card div p {
+    font-size: 0.9rem;
+    color: var(--link-text-color);
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
-    .about-tag {
-        padding: 0rem 0rem;
-        font-size: 0.85rem;
-    }
+.info-card div span {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* Right Side: Contact Form */
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background: var(--card-color);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 2px dashed var(--border-color);
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 2px dashed var(--border-color);
+    background: var(--accent-color);
+    color: var(--text-color);
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: var(--secondary-accent-color);
+    background: var(--hover-color);
+    transform: scale(1.02);
+}
+
+.contact-form button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    background: var(--secondary-accent-color);
+    color: var(--accent-color);
+    border: 2px dashed transparent;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition: transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: var(--accent-color);
+    color: var(--secondary-accent-color);
+    border-color: var(--secondary-accent-color);
+    transform: translateY(-3px);
+}
+
+.contact-form button:hover svg {
+    transform: translateX(5px) rotate(-45deg);
+}
+
+/* =========================================
+   FOOTER STYLING
+   ========================================= */
+
+.site-footer {
+    margin-top: 5rem;
+    padding: 2rem;
+    background: var(--card-color);
+    border: 2px dashed var(--border-color);
+    border-radius: 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-logo {
+    font-family: 'Dingos Stamp', sans-serif;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.footer-bottom p {
+    color: var(--link-text-color);
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   NEW THEME TOGGLE (CHECKBOX STYLE)
+   ========================================= */
+
+.toggle-button {
+    display: flex;
+    align-items: center;
+}
+
+/* Hide default checkbox */
+.theme-checkbox {
+    appearance: none;
+    width: 60px;
+    height: 30px;
+    background: var(--accent-color);
+    border: 2px dashed var(--border-color);
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* The sliding circle */
+.theme-checkbox::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 18px;
+    height: 18px;
+    background: var(--secondary-accent-color);
+    border-radius: 50%;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Checked State (Dark Mode) */
+.theme-checkbox:checked {
+    background: var(--secondary-text-color);
+}
+
+.theme-checkbox:checked::after {
+    transform: translateX(30px);
+    background: var(--bg-color);
 }
