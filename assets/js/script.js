@@ -81,7 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const percentage = proficiencyLevels[level] || 50; // Default to 50% if level not found
             
             // Set the width
-            progressBar.style.width = percentage + '%';
+            progressBar.style.width = percentage + '%', 'important';
         }
     });
 });
+
