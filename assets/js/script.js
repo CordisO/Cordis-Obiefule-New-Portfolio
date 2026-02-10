@@ -58,31 +58,31 @@ document.addEventListener('DOMContentLoaded', function() {
     typeEffect();
 });
 
-// ** Automatically set progress bar width based on proficiency level **
+// ** Language Progress Bar Animation Logic **
 document.addEventListener('DOMContentLoaded', function() {
-    const languageCards = document.querySelectorAll('.flip-slide');
-    
-    // Proficiency level mapping to percentage
     const proficiencyLevels = {
-        'A1': 20,  // Beginner
-        'A2': 40,  // Elementary
-        'B1': 60,  // Intermediate
-        'B2': 75,  // Upper Intermediate
-        'C1': 90,  // Advanced
-        'C2': 100  // Native/Fluent
+        'A1': 20, 'A2': 40, 'B1': 60, 'B2': 75, 'C1': 90, 'C2': 100
     };
-    
-    languageCards.forEach(card => {
-        const proficiencyElement = card.querySelector('.proficiency');
-        const progressBar = card.querySelector('.progress-fill');
-        
-        if (proficiencyElement && progressBar) {
-            const level = proficiencyElement.textContent.trim().toUpperCase();
-            const percentage = proficiencyLevels[level] || 50; // Default to 50% if level not found
-            
-            // Set the width
-            progressBar.style.width = percentage + '%', 'important';
-        }
-    });
-});
 
+    const animateBars = () => {
+        const fills = document.querySelectorAll('.progress-fill');
+        fills.forEach(fill => {
+            const level = fill.getAttribute('data-level');
+            const percentage = proficiencyLevels[level] || 50;
+            fill.style.width = percentage + '%';
+        });
+    };
+
+    // Trigger animation when the section is in view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateBars();
+                observer.unobserve(entry.target); // Run only once
+            }
+        });
+    }, { threshold: 0.3 });
+
+    const languageSection = document.querySelector('#language');
+    if (languageSection) observer.observe(languageSection);
+});
