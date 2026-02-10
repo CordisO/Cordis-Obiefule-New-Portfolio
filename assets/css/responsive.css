@@ -95,10 +95,6 @@
 }
 
 @media (max-width: 600px) {
-    .nav-container {
-        width: 100%; /* take more space on small screens */
-        box-sizing: border-box;
-    }
     .nav-container ul li a {
         font-size: 1rem; /* slightly smaller text */
     }
@@ -213,7 +209,7 @@
 
     /* Fix Navbar Width */
     .nav-container {
-        width: 90%; /* Wider navbar on mobile so text fits */
+        width: 50%; /* Wider navbar on mobile so text fits */
         top: 10px;
     }
     
@@ -256,7 +252,7 @@
     }
 
     .profile-image-container {
-        max-width: 180px; /* Smaller image on mobile */
+        max-width: 250px; /* Smaller image on mobile */
         margin-bottom: 1rem;
     }
 
@@ -273,11 +269,6 @@
 
 /* 4. Fix Project & Blog Cards (The "Trash" Look Cause) */
 @media (max-width: 768px) {
-    /* PROBLEM: Your original minmax(350px, 1fr) forced cards to be 350px wide.
-       Phones are often only 375px wide. 350px + padding = broken layout.
-       
-       FIX: Lower the minimum width to 280px or 100%.
-    */
     .project-container, 
     .blog-container {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -349,3 +340,4 @@
     }
 
 }
+
