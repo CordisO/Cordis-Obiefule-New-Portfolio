@@ -96,7 +96,8 @@
 
 @media (max-width: 600px) {
     .nav-container {
-        width: 80%; /* take more space on small screens */
+        width: 100%; /* take more space on small screens */
+        box-sizing: border-box;
     }
     .nav-container ul li a {
         font-size: 1rem; /* slightly smaller text */
@@ -346,4 +347,5 @@
         padding: 10px;
         font-size: 0.8rem;
     }
+
 }
