@@ -204,7 +204,7 @@
 /* 1. Global Layout Adjustments */
 @media (max-width: 768px) {
     body {
-        padding: 1rem; /* Reduce padding to give content more room */
+         /* Reduce padding to give content more room */
     }
 
     /* Fix Navbar Width */
@@ -340,4 +340,5 @@
     }
 
 }
+
 
