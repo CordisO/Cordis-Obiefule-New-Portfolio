@@ -542,11 +542,14 @@ body {
 }
 
 .project-4::before {
-    background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop');
+    background-image: url('/assets/images/vocabulingo-img.png');
 }
 
 .project-5::before {
-    background-image: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=500&h=300&fit=crop');
+    background-image: url('/assets/images/pseudolingo-img.png');
+}
+.project-6::before {
+    background-image: url('/assets/images/somethingrare-img.png');
 }
 
 /*BLOG SECTION STYLING*/
