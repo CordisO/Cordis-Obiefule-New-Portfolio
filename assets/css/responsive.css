@@ -63,9 +63,21 @@
         font-size: 1.8rem;
     }
 
+    .action-buttons {
+       flex-direction: column;
+       align-items: center;
+       width: 100%;
+    }
+
+    .action-buttons a {
+       width: 90%;
+       justify-content: center;
+       font-size: 1rem;
+       padding: 10px;
+    }
+
     .btn {
         padding: 1rem 1rem;
-        font-size: 0.6rem;
     }
 
     .action-buttons svg {
@@ -347,3 +359,4 @@
 
 }
    
+
