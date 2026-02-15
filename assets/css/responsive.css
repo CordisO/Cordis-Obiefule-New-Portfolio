@@ -70,14 +70,7 @@
     }
 
     .action-buttons a {
-       width: 90%;
-       justify-content: center;
        font-size: 1rem;
-       padding: 10px;
-    }
-
-    .btn {
-        padding: 1rem 1rem;
     }
 
     .action-buttons svg {
@@ -359,4 +352,5 @@
 
 }
    
+
 
