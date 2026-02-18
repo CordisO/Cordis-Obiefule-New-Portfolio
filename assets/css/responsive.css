@@ -70,12 +70,12 @@
     }
 
     .action-buttons svg {
-        width: 22px;
-        height: 22px;
+        width: 25px;
+        height: 25px;
     }
 
     .action-buttons a {
-       font-size: 0.9rem;
+       font-size: 1.1rem;
     }
 
 }
@@ -353,6 +353,7 @@
 
 }
    
+
 
 
 
