@@ -15,7 +15,6 @@ const words = [
     'Website Developer',
     'Technical Writer',
     'UI/UX Designer',
-    'Creative Coder',
     'Digital Storyteller'
 ];
 
@@ -86,3 +85,4 @@ document.addEventListener('DOMContentLoaded', function() {
     const languageSection = document.querySelector('#language');
     if (languageSection) observer.observe(languageSection);
 });
+
