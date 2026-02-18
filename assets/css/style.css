@@ -196,6 +196,13 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.action-buttons a {
+        text-decoration: none;
+        
 }
 
 .btn {
