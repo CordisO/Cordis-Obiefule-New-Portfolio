@@ -207,12 +207,6 @@ body {
     align-items: center;
     width: 100%;
 }
-.action-buttons a {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .btn {
     padding: 1rem 1.5rem;
