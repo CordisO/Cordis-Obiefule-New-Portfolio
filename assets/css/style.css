@@ -168,6 +168,14 @@ body {
     font-family: 'Dingos Stamp', 'Century Gothic', sans-serif;
 }
 
+.profile-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: -20px; /* Pulls it closer to the name */
+    color: var(--secondary-text-color);
+    text-align: center;
+}
+
 /* Social Links */
 .social-links {
     display: flex;
