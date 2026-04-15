@@ -37,6 +37,7 @@ html {
   --text-color: #3f46c2;
   --link-text-color: #3f46c2;
   --secondary-text-color: #dab6ff;
+  --description-color: #dab6ff;
   --accent-color: #d5d0ec;
   --secondary-accent-color: #3f46c2;
   --svg-hover-color: #8c52ff;
@@ -51,6 +52,7 @@ body.dark-theme {
   --text-color: #d5d0ec;
   --link-text-color: #8c52ff;
   --secondary-text-color: #dab6ff;
+  --description-color: #d5d0ec;
   --accent-color: #d5d0ec;
   --secondary-accent-color: #8c52ff;
   --svg-hover-color: #3f46c2;
@@ -316,7 +318,7 @@ body {
 
 .about-description {
     font-size: 1.1rem;
-    color: var(--secondary-text-color);
+    color: var(--description-color);
     line-height: 1.8;
     margin-bottom: 2rem;
     text-align: justify;
