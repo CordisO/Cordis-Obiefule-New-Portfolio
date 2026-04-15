@@ -137,7 +137,7 @@
                         <span>CSS</span>
                         <span>JavaScript</span>
                     </div>
-                    <div class="project-card-footer">
+                    <div class="card-footer">
                         <button class="btn-case-study" data-project="noeopad">Read Case Study</button>
                         <a href="#" class="project-link" title="View Live">
                             <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -625,6 +625,26 @@
             </div>
         </div>
     </footer>
+
+    <!-- ===== CASE STUDY MODAL ===== -->
+    <div class="cs-overlay" id="csOverlay">
+    <div class="cs-backdrop" id="csBackdrop"></div>
+    <div class="cs-modal" id="csModal">
+        <div class="cs-modal-header">
+            <div>
+                <p class="cs-modal-label" id="csLabel">Case Study</p>
+                <h2 class="cs-modal-title" id="csTitle">Project Title</h2>
+            </div>
+            <button class="cs-close" id="csClose">✕</button>
+        </div>
+        <div class="cs-modal-body" id="csBody">
+        <!-- dynamically filled -->
+        </div>
+        <div class="cs-modal-footer">
+        <div class="cs-signature">Cordis</div>
+        </div>
+    </div>
+    </div>
     
     <script src="assets/js/script.js"></script>
     <script src="assets/js/music-player.js"></script>

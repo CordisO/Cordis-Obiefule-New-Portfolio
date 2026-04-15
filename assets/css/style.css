@@ -501,7 +501,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.project-card-footer {
+.card-footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
