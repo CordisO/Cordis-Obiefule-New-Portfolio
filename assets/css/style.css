@@ -530,6 +530,13 @@ body {
     border: 2px dashed var(--secondary-accent-color);
 }
 
+.project-card:hover .btn-case-study {
+    background: var(--svg-hover-color);
+    color: var(--hover-color);
+    border-color: var(--hover-color);
+    transform: scale(1);
+}
+
 .project-links {
     display: flex;
     gap: 0.8rem;
