@@ -562,6 +562,57 @@ body {
     background-image: url('/assets/images/somethingrare-img.png');
 }
 
+/*PROCESS SECTION STYLING (NEW ADDITION)*/
+#process {
+    padding: 6rem 4rem;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin-top: 4rem;
+}
+
+.process-step {
+    padding: 2rem 1.5rem;
+    border: 2px dashed var(--border-color);
+    background-color: var(--card-color);
+    border-radius: 15px;
+    position: relative;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+.process-step:hover {
+    box-shadow: 0 0 20px var(--secondary-accent-color);
+    border-color: var(--border-color);
+    background: var(--secondary-text-color);
+}
+
+.step-num {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--link-text-color);
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.step-name {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--link-text-color);
+    margin-bottom: 0.5rem;
+}
+
+.step-desc {
+    font-size: 0.85rem;
+    color: var(--link-text-color);
+    line-height: 1.7;
+}
+
 /*BLOG SECTION STYLING*/
 .blog-header .section-title {
     margin-top: 2rem !important;
