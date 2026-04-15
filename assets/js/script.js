@@ -12,10 +12,10 @@ window.addEventListener('scroll', function () {
 const typedTextElement = document.getElementById('typed-text');
 
 const words = [
-    'Website Developer',
-    'Technical Writer',
     'UI/UX Designer',
-    'Digital Storyteller'
+    'UX Analyst',
+    'Frontend Developer',
+    'UX Writer',
 ];
 
 let wordIndex = 0;
