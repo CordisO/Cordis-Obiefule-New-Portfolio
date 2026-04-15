@@ -508,7 +508,6 @@ body {
     gap: 1rem;
 }
 
-/*Add this*/
 .btn-case-study {
     flex: 1;
     background: var(--card-color);
@@ -772,7 +771,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: var(--secondary-text-color);
+    background: var(--card-color);
     border: 2px dashed var(--secondary-accent-color);
     color: var(--border-color);
     text-decoration: none;
